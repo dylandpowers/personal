@@ -32,6 +32,7 @@ subtitle = ""
   # [[content.filter_button]]
   #   name = "Other"
   #   tag = "Demo"
+  title = "Alexa Transloc Skill"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
