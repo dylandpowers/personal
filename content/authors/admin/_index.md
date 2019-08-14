@@ -60,6 +60,6 @@ email: ""
 # user_groups:
 ---
 
-Dylan is a senior Electrical and Computer Engineering and Computer Science student at Duke University, with a minor in Economics. Dylan's technical interests include advanced design patterns, digital systems, and mobile application development. Dylan has two software engineering internships under his belt from the last two summers, at Tanium and Yext, respectively.
+Dylan is a senior at Duke University majoring in Electrical and Computer Engineering and Computer Science and minoring in Economics. Dylan's technical interests include advanced design patterns, digital systems, and mobile application development. Dylan has two software engineering internships under his belt from the last two summers, at Tanium and Yext, respectively.
 
 At Duke, Dylan is a teaching assistant for three classes and is the founder and president of Duke Speech, Duke's competitive speaking team. Dylan also serves as a researcher for student government, a developer for the university union, and a tour guide for the Pratt School of Engineering. Dylan also serves as the head extemporaneous speaking coach for Durham Academy. 
