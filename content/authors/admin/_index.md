@@ -18,13 +18,12 @@ organizations:
   url: "https://www.duke.edu/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My interests include advanced design patterns, software scalability, mobile app development, entrepreneurship, and tech company culture.
+bio: My interests include advanced design patterns, software scalability, mobile app development, and tech company culture.
 
 interests:
 - Advanced design patterns
 - Software scalability
 - Mobile application development
-- Entrepreneurship
 - Tech company culture
 
 education:
