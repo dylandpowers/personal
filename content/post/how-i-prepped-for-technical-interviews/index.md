@@ -28,7 +28,7 @@ image:
 projects: []
 ---
 
-I spent the last 3-ish months recruiting for a full-time software engineering job, and ended up signing with [Yext](https://www.yext.com/) as a software engineer in New York City (I also interned here). Along the way, I received a couple offers from other great companies, but ultimately I decided that Yext is the best place for me to start my career. I wanted to share how I prepared for the stress-ball that is recruiting, with hopes that someone else can use this guide to make the process a little less taxing on the body and soul.
+I spent the last 3-ish months recruiting for a full-time software engineering job. Along the way, I received a couple offers from some great companies. I wanted to share how I prepared for the stress-ball that is recruiting, with hopes that someone else can use this guide to make the process a little less taxing on the body and soul.
 
 ### LeetCode
 Far and above, [LeetCode](https://leetcode.com/) is the best way to prepare for any coding interview. However, in the past, I lacked any rhyme or reason to my approach on LeetCode; I would just filter the question list by questions that I had not solved yet, and pick randomly from that list. However, I somewhat-consciously leaned toward problems that seemed interesting, or that I knew I could solve in a reasonable amount of time. I knew that I needed to change this, so I turned toward mock interviews. 
