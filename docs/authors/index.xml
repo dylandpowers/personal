@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Academic</title>
+    <link>https://dylandpowers.github.io/personal/authors/</link>
+      <atom:link href="https://dylandpowers.github.io/personal/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 15 Aug 2019 13:33:00 -0600</lastBuildDate>
+    <image>
+      <url>https://dylandpowers.github.io/personal/img/icon-192.png</url>
+      <title>Authors</title>
+      <link>https://dylandpowers.github.io/personal/authors/</link>
+    </image>
+    
+    <item>
+      <title>Dylan Powers</title>
+      <link>https://dylandpowers.github.io/personal/authors/dylan-powers/</link>
+      <pubDate>Thu, 15 Aug 2019 13:33:00 -0600</pubDate>
+      <guid>https://dylandpowers.github.io/personal/authors/dylan-powers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dylandpowers.github.io/personal/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dylandpowers.github.io/personal/authors/admin/</guid>
+      <description>&lt;p&gt;Dylan is a senior at Duke University majoring in Electrical and Computer Engineering and Computer Science and minoring in Economics. Dylan&amp;rsquo;s technical interests include design patterns, software scalability, and mobile application development. Dylan recently interned as a Software Engineer for &lt;a href=&#34;https://yext.com&#34; target=&#34;_blank&#34;&gt;Yext&lt;/a&gt;, where he will be returning as a full-time Software Engineer in August 2020. Dylan currently develops for &lt;a href=&#34;https://ourspaceapp.com&#34; target=&#34;_blank&#34;&gt;OurSpace&lt;/a&gt;, a real-time Q&amp;amp;A platform for locations &amp;amp; spaces.&lt;/p&gt;
+
+&lt;p&gt;At Duke, Dylan is a teaching assistant for three classes and is the founder and president of Duke Speech, Duke&amp;rsquo;s competitive speaking team. Dylan also serves as a researcher for student government, a developer for the university union, and a tour guide for the Pratt School of Engineering. Dylan also serves as the head extemporaneous speaking coach for Durham Academy.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

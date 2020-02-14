@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academic</title>
+    <link>https://dylandpowers.github.io/personal/</link>
+      <atom:link href="https://dylandpowers.github.io/personal/index.xml" rel="self" type="application/rss+xml" />
+    <description>Academic</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 09 Feb 2020 18:55:28 -0500</lastBuildDate>
+    <image>
+      <url>https://dylandpowers.github.io/personal/img/icon-192.png</url>
+      <title>Academic</title>
+      <link>https://dylandpowers.github.io/personal/</link>
+    </image>
+    
+    <item>
+      <title>Striking the Balance: Development in a Fast-Moving Startup</title>
+      <link>https://dylandpowers.github.io/personal/post/striking-the-balance-development-in-a-fast-moving-startup/</link>
+      <pubDate>Sun, 09 Feb 2020 18:55:28 -0500</pubDate>
+      <guid>https://dylandpowers.github.io/personal/post/striking-the-balance-development-in-a-fast-moving-startup/</guid>
+      <description>
+
+&lt;p&gt;Perhaps made most famous by Facebook&amp;rsquo;s &amp;ldquo;Move Fast, Break Things&amp;rdquo; mantra, the philosophy of iterating extremely quickly has become proliferate in the tech world. Tools like JIRA, GitHub, and suites of CI/CD tools give teams no excuse to not push out products and updates as quickly as they can. However, as an organization grows, developers need to take into account scalability and flexibility of codebases. As such (at least from what I have observed), larger organizations tend to slow down over time to accommodate more scrutinous code reviews and technological research.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;featured.jpg&#34; alt=&#34;ourspace&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Over the past five months, I have been a Software Engineer for &lt;a href=&#34;https://ourspaceapp.com/&#34; target=&#34;_blank&#34;&gt;OurSpace&lt;/a&gt;, a real-time Q&amp;amp;A platform for locations and spaces. Currently, we have released a full working product at Duke University, and we plan to expand as we continue to perfect our core product. Working on a startup means that we &lt;em&gt;do&lt;/em&gt; move extremely quickly; a lot quicker than anything I am used to. This might mean pushing out hundreds of lines of code every day to meet our strict deadlines and release goals. As such, we often do not have time to waste with overly scrutinous code reviews and setting up rigorous CI/CD pipelines.&lt;/p&gt;
+
+&lt;p&gt;At least, that&amp;rsquo;s what I thought at first. Since then, I have realized that while we do need to hit deadlines, investing a little bit more time into flexibility really pays off in the long run. In this article, I aim to explain why it&amp;rsquo;s important to strike that balance between moving quickly and developing flexible, robust code.&lt;/p&gt;
+
+&lt;h3 id=&#34;creating-reusable-interfaces&#34;&gt;Creating Reusable Interfaces&lt;/h3&gt;
+
+&lt;p&gt;Part of the excitement of working on a startup is the freedom in choosing which technologies to use - this also means switching technologies often. This means that, especially on the server-side, creating reusable interfaces is invaluable, as it allows future devs to easily swap out implementations.&lt;/p&gt;
+
+&lt;p&gt;When developing quickly, it&amp;rsquo;s really easy to fall into the mindset of &amp;ldquo;I&amp;rsquo;m just going to make a class that works right now, so there&amp;rsquo;s no need to create an interface.&amp;rdquo; Yes, the development process will be easier &lt;em&gt;now&lt;/em&gt;, but what happens in the future when another developer has to swap out the implementation? They will spend at least twice as long as they would if you had just made an interface.&lt;/p&gt;
+
+&lt;p&gt;To give you an example: when we first started on this journey, we used Google&amp;rsquo;s &lt;a href=&#34;https://firebase.google.com/docs/firestore&#34; target=&#34;_blank&#34;&gt;Cloud Firestore&lt;/a&gt; for all of our data storage. This meant clients on the backend for communicating with our Firestore. Luckily enough, our early developers created a &lt;code&gt;DbClient&lt;/code&gt; interface that  declared methods for communicating with &lt;em&gt;whatever&lt;/em&gt; db we chose, so when we finally made the choice to migrate to &lt;a href=&#34;https://www.mongodb.com/&#34; target=&#34;_blank&#34;&gt;MongoDB&lt;/a&gt;, the transition was effortless. Even though we lost some early development time creating these interfaces, we more than made up for it by saving a plethora of time swapping out our implementation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;mongodb.jpg&#34; alt=&#34;mongodb&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;documenting-patterns&#34;&gt;Documenting Patterns&lt;/h3&gt;
+
+&lt;p&gt;Writing good documentation is yet another action that most reserve for medium-to-large companies only. It&amp;rsquo;s also something that takes time which could be &amp;ldquo;better spent&amp;rdquo; working on features and moving us toward our project goals. However, despite the initial overhead, writing down our most-used design patterns in plain English has saved us countless time.&lt;/p&gt;
+
+&lt;p&gt;I recommend creating a wiki for all different areas of development; for us, that includes server-side, our iOS client, and DevOps, among others. In that wiki, write down all of the common practices used throughout the organization so that developers can turn to it when initially planning out a feature. This saves developers a lot of time that would otherwise be spent either brainstorming a new design (convoluting the existing codebase) or mapping out existing code to understand how a design works. Writing it down in plain English will take 5-10 minutes, but will save developers hours of time in the future.&lt;/p&gt;
+
+&lt;h3 id=&#34;automating-processes&#34;&gt;Automating Processes&lt;/h3&gt;
+
+&lt;p&gt;This should go without saying, but always reserve time at the beginning to automate &lt;strong&gt;everything&lt;/strong&gt;. Run tests on every push. Connect GitHub to your messaging platform to get notifications whenever a PR is created. Deploy whenever a PR is closed. While this may cost some time at the beginning doing research on automation tools, the amount of time saved is astronomical. Please, set some time aside right now, and ask how you can best automate your current workflow.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;cicd.jpg&#34; alt=&#34;cicd&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Protip: &lt;a href=&#34;https://github.com/features/actions&#34; target=&#34;_blank&#34;&gt;GitHub Actions&lt;/a&gt; are a really cool and easy way to automate workflows if you use GitHub for hosting.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Working on a startup has been incredibly challenging given the required speed of development. However, as I continue to develop mass amounts of code daily, I thank my past self for designing things well enough to make development for present-day me much easier. When embarking on this long, rewarding journey, don&amp;rsquo;t fall into the &amp;ldquo;move fast&amp;rdquo; mentality unless you append &amp;ldquo;in an well-thought out manner&amp;rdquo; to the end of it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How I Prepped for Technical Interviews</title>
+      <link>https://dylandpowers.github.io/personal/post/how-i-prepped-for-technical-interviews/</link>
+      <pubDate>Mon, 18 Nov 2019 21:13:33 -0500</pubDate>
+      <guid>https://dylandpowers.github.io/personal/post/how-i-prepped-for-technical-interviews/</guid>
+      <description>
+
+&lt;p&gt;I spent the last 3-ish months recruiting for a full-time software engineering job. Along the way, I received a couple offers from some great companies. I wanted to share how I prepared for the stress-ball that is recruiting, with hopes that someone else can use this guide to make the process a little less taxing on the body and soul.&lt;/p&gt;
+
+&lt;h3 id=&#34;leetcode&#34;&gt;LeetCode&lt;/h3&gt;
+
+&lt;p&gt;Far and above, &lt;a href=&#34;https://leetcode.com/&#34; target=&#34;_blank&#34;&gt;LeetCode&lt;/a&gt; is the best way to prepare for any coding interview. However, in the past, I lacked any rhyme or reason to my approach on LeetCode; I would just filter the question list by questions that I had not solved yet, and pick randomly from that list. However, I somewhat-consciously leaned toward problems that seemed interesting, or that I knew I could solve in a reasonable amount of time. I knew that I needed to change this, so I turned toward mock interviews.&lt;/p&gt;
+
+&lt;h3 id=&#34;mock-interviews&#34;&gt;Mock Interviews&lt;/h3&gt;
+
+&lt;p&gt;To truly reflect the nature of the interview process, practice should be just as random as the interview. To best simulate this environment, I made extensive use of LeetCode&amp;rsquo;s mock interview feature. Currently, they only provide mock interviews from FAANG (and similar) companies. For each company, they provide mock interviews for online assessments (OAs), phone interviews, and on-site interviews.&lt;/p&gt;
+
+&lt;p&gt;The questions in the mock interviews are randomly sampled from a collection of questions that are typically asked in interviews for that company. Furthermore, each question &lt;em&gt;can&lt;/em&gt; be found on LeetCode outside of the mock interview feature. However, the best part about the mocks is that &lt;em&gt;you cannot view the answer during the interview&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Outside of the mocks, I would sometimes get frustrated by my lack of progress on the answer, and would immediately turn to the &amp;ldquo;Solution&amp;rdquo; or &amp;ldquo;Discussion&amp;rdquo; sections on LeetCode. With the inability  to do so, I found myself really persevering and digging deep to find the special tricks to solve the given problem. More often than not, I could arrive at the solution myself, which really reinforced the material.&lt;/p&gt;
+
+&lt;p&gt;Even if you are not preparing for a FAANG interview, I highly suggest using mock interviews regardless as they give you an accurate sample of what kinds of questions are often asked in the more difficult interviews.&lt;/p&gt;
+
+&lt;h3 id=&#34;study-guide&#34;&gt;Study Guide&lt;/h3&gt;
+
+&lt;p&gt;After each problem that I solved, I would write a detailed solution to it in my Google Doc study guide, which now rounds out at 36 pages in size 12 font. I realized, in addition to knowing how to code the solution to a given problem, it&amp;rsquo;s just as important to &lt;em&gt;be able to explain how you arrived at the answer in plain english&lt;/em&gt;. So, in addition to writing the code to solve the problem in the study guide, I would write 1-2 paragraphs of english explaining how to arrive at the solution.&lt;/p&gt;
+
+&lt;p&gt;Preparing this study guide really reinforced my knowledge of DSA concepts, especially binary trees. I found myself more easily solving difficult problems the longer this study guide became. If you would like a copy of the study guide, please email me and I will be happy to send it over!&lt;/p&gt;
+
+&lt;h3 id=&#34;verbal-communication&#34;&gt;Verbal Communication&lt;/h3&gt;
+
+&lt;p&gt;I would always do my mock interviews in the mornings before heading to campus. If my roommate was still home, I would have to walk out into the living room and say &amp;ldquo;if you hear me talking out loud, I promise I&amp;rsquo;m not talking to myself&amp;rdquo; (even though, in a way, I was). During each mock interview, I would verbally communicate my solutions as if my computer were the interviewer, since this is how real interviews happen. In the actual interview, communication of your thought process matters almost as much as the solution itself. However, LeetCode practice alone (without talking out loud) cannot paint the whole picture. I cannot stress enough the importance of talking through your solutions out loud, even if it is just in an empty room.&lt;/p&gt;
+
+&lt;h3 id=&#34;behavioral-questions&#34;&gt;Behavioral Questions&lt;/h3&gt;
+
+&lt;p&gt;For my first couple interviews, I thought that I could get by with not practicing any part of the behavioral interview process. &lt;strong&gt;This is not the case&lt;/strong&gt;. During those interviews, I found myself stumbling over simple questions like &amp;ldquo;tell me about a time you disagreed with someone&amp;rdquo; or &amp;ldquo;tell me about the project that you are most proud of&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;After that, I knew that I had to get to work. I made an excel sheet for all major projects I have done (school, work, and personal), and wrote down key aspects from each, such as&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Leadership displayed&lt;/li&gt;
+&lt;li&gt;Conflicts and how they were resolved&lt;/li&gt;
+&lt;li&gt;Best part of the project&lt;/li&gt;
+&lt;li&gt;Biggest challenge of the project&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Knowing these made my interview process that much smoother.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bonus&lt;/strong&gt;: make sure to have a 30-second spiel ready for the classic &amp;ldquo;tell me about yourself!&amp;rdquo; It will help to get the interview off to a good start if you really nail this answer.&lt;/p&gt;
+
+&lt;h3 id=&#34;prepare-questions-for-interviewers&#34;&gt;Prepare Questions for Interviewers&lt;/h3&gt;
+
+&lt;p&gt;Companies want to know that you are invested in them, and asking them pointed questions is a great way to send that signal. I did a lot of research beforehand, and would write down non-generic questions about each company to ask during the interview. This is also a great time to ask the tough questions and find out if the interviewer &lt;em&gt;really&lt;/em&gt; enjoys working at that company.&lt;/p&gt;
+
+&lt;p&gt;While the interview process can be extremely stressful, it can also be extremely rewarding if done correctly. Put in the work, don&amp;rsquo;t cut corners, and I promise you will find yourself with a couple of really nice looking offers when it&amp;rsquo;s all over.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tips for a Summer in New York</title>
+      <link>https://dylandpowers.github.io/personal/post/tips-for-a-summer-in-new-york/</link>
+      <pubDate>Tue, 27 Aug 2019 17:25:06 -0400</pubDate>
+      <guid>https://dylandpowers.github.io/personal/post/tips-for-a-summer-in-new-york/</guid>
+      <description>
+
+&lt;p&gt;This past summer I worked at &lt;a href=&#34;https://www.yext.com&#34; target=&#34;_blank&#34;&gt;Yext&lt;/a&gt; in New York City. Our office is located at the corner of 23rd and Madison Avenue, right next to the famous Flatiron Building, pictured below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;flatiron.jpg&#34; alt=&#34;The Flatiron Building&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Living in New York was the best experience in my life, and I want to share some tips on how to have both a productive and fun summer in New York; I hope future interns can make use of this guide.&lt;/p&gt;
+
+&lt;h2 id=&#34;if-you-work-in-manhattan-live-in-manhattan&#34;&gt;If You Work in Manhattan, Live in Manhattan&lt;/h2&gt;
+
+&lt;p&gt;I made the mistake of living in Brooklyn, which made my 8-stop commute on the F train quite long. My roommate and I grabbed an Airbnb for a much cheaper price, but we still regret not living in the city. Most students live in admittedly-small dorms, but the location is &lt;em&gt;all&lt;/em&gt; that matters. After a night out, taking the train home at 3am is the least appealing thing in the world, and Ubers can often break the bank. Just live in Manhattan.&lt;/p&gt;
+
+&lt;h2 id=&#34;make-plans-every-night&#34;&gt;Make Plans Every Night&lt;/h2&gt;
+
+&lt;p&gt;An actual conversation I had with my mentor this summer:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Dylan, do you have plans tonight?&lt;/p&gt;
+
+&lt;p&gt;No, not tonight.&lt;/p&gt;
+
+&lt;p&gt;Why not? It&amp;rsquo;s New York!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;After that, I made a conscious effort to &lt;strong&gt;always&lt;/strong&gt; find an event to go to or make plans to go to dinner with someone after work. Luckily, a fellow intern at my company compiled a calendar of free events in New York over the summer, so I just added that to my Google Calendar. If I&amp;rsquo;m only going to spend 3 months in the greatest city on Earth, I might as well make the most of it. You should too.&lt;/p&gt;
+
+&lt;h2 id=&#34;use-pigeon-for-the-subway&#34;&gt;Use Pigeon for the Subway&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://pigeon.area120.com/home&#34; target=&#34;_blank&#34;&gt;Pigeon&lt;/a&gt; is a crowdsourced transit app for the subway in New York City. Not only can you plan trips and see which lines stop where, but you can also see reports of lines/stations that have problems. On July 13th, the power went out in some of Manhattan, and a lot of lines stopped running. My sister (who was visiting) and I waited in the station for twenty minutes before I finally checked Pigeon and realized what had happened. Without the app, we probably would have waited longer.&lt;/p&gt;
+
+&lt;p&gt;Also, be a good samaritan and post on the app! If something is going on, let people know. Good Karma pays off!&lt;/p&gt;
+
+&lt;h2 id=&#34;wait-for-the-train-outside-the-station&#34;&gt;Wait for the Train Outside the Station&lt;/h2&gt;
+
+&lt;p&gt;No joke, it&amp;rsquo;s 10-15 degrees Fahrenheit hotter in the station. The trains feel great, but the stations feel like standing in the middle of the Sahara Desert wearing a suit made out of tin foil. Get on your phone, check the arrival time on the app, and wait outside until the train is three or so minutes away.&lt;/p&gt;
+
+&lt;h2 id=&#34;use-yelp-to-find-restaurants&#34;&gt;Use Yelp to Find Restaurants&lt;/h2&gt;
+
+&lt;p&gt;Since there are so many restaurants in Manhattan, deciding what to eat feels impossible sometimes. However, whenever going out with friends, we always used &lt;a href=&#34;https://www.yelp.com&#34; target=&#34;_blank&#34;&gt;Yelp&lt;/a&gt; to decide what to eat. It never failed once.&lt;/p&gt;
+
+&lt;p&gt;Pro tip: since you&amp;rsquo;re only there for a short time, use the 4-star or higher filter.&lt;/p&gt;
+
+&lt;p&gt;I hope everyone gets the opportunity to spend a summer in New York. It really goes by quickly, so it&amp;rsquo;s important to pack as much as possible into the short time frame. Have fun in the greatest city on Earth!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Books I Read This Summer</title>
+      <link>https://dylandpowers.github.io/personal/post/books-i-read-this-summer/</link>
+      <pubDate>Thu, 15 Aug 2019 13:33:00 -0600</pubDate>
+      <guid>https://dylandpowers.github.io/personal/post/books-i-read-this-summer/</guid>
+      <description>
+
+&lt;p&gt;One of my favorite things about the summers is how much time I have to catch up on reading. Admittedly I have more fun reading at home than in the crowded F train to Manhattan, but I worked with what I had this summer. Over the course of the summer, I read 6 books, and I want to share my experience with each of them, in the order that I read them. Here it goes:&lt;/p&gt;
+
+&lt;h2 id=&#34;smarter-faster-better-by-charles-duhigg&#34;&gt;&lt;em&gt;Smarter, Faster, Better&lt;/em&gt; by Charles Duhigg&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;sfb.jpeg&#34; alt=&#34;Smarter, Faster, Better&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I read one of Duhigg&amp;rsquo;s other books, &lt;em&gt;The Power of Habit&lt;/em&gt;, and I loved it so much that I just had to buy his new book. It did not disappoint. His description of productivity and the tools he gives to enhance day-to-day output are unparalleled.&lt;/p&gt;
+
+&lt;p&gt;Duhigg does an amazing job of giving real-world examples of situations, and showing how people apply his principles to become more productive people. More than just a productivity guide, though, this book also describes how effective teams function together and how people can best internalize information.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Biggest Takeaway&lt;/strong&gt;: His chapter on internalizing information really stuck with me, because I&amp;rsquo;m a firm believer in lifelong learning. He talks about the importance of not only &lt;em&gt;receiving&lt;/em&gt; information, but &lt;em&gt;immediately applying it&lt;/em&gt; to a real-world situation:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The people who are most successful at learning&amp;hellip; are the ones who know how to use disfluency to their advantage. They transform what life throws at them, rather than just taking it as it comes. (264)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As I try to advance in my career, having the ability to really internalize large amounts of information will prove extremely useful, and I owe it to Duhigg for helping me learn ways to do that.&lt;/p&gt;
+
+&lt;p&gt;Find this book on &lt;a href=&#34;https://www.amazon.com/Smarter-Faster-Better-Transformative-Productivity/dp/0812983599/ref=sr_1_3?crid=3VE58XKTHXWD9&amp;amp;keywords=smarter+faster+better&amp;amp;qid=1565898014&amp;amp;s=books&amp;amp;sprefix=smarter+faster%2Cstripbooks%2C159&amp;amp;sr=1-3&#34; target=&#34;_blank&#34;&gt;Amazon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;liar-s-poker-by-michael-lewis&#34;&gt;&lt;em&gt;Liar&amp;rsquo;s Poker&lt;/em&gt; by Michael Lewis&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;lp.jpeg&#34; alt=&#34;Liar&#39;s Poker&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For those that don&amp;rsquo;t know Michael Lewis, he wrote such books-turned-movies as &lt;em&gt;Moneyball&lt;/em&gt; and &lt;em&gt;The Big Short&lt;/em&gt;. He is an extremely gifted storyteller known for his incredibly engaging descriptions of real world events.&lt;/p&gt;
+
+&lt;p&gt;In &lt;em&gt;Liar&amp;rsquo;s Poker&lt;/em&gt;, he takes a turn and writes a book about his own experience on Wall Street in the 80&amp;rsquo;s. He worked for &lt;a href=&#34;https://en.wikipedia.org/wiki/Salomon_Brothers&#34; target=&#34;_blank&#34;&gt;Salomon Brothers&lt;/a&gt;, one of the biggest firms at the time. Throughout the book, he weaves his own experiences in with vivid descriptions of how Salomon Brothers worked internally. They are quite unflattering descriptions.&lt;/p&gt;
+
+&lt;p&gt;A large part of the book centers around the training sessions that all new traders had to endure (note use of the word &amp;ldquo;endure&amp;rdquo;) before making their way onto the floor. Lewis could not believe how childish some of his colleagues were; they were often caught throwing paper balls at the lecturers. He also includes a lot of technical economic jargon, but tries to explain it in a way that anybody could digest.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Biggest Takeaway&lt;/strong&gt;: Wall Street was, and always will be, a cutthroat environment. Traders have little to no regard for their customers, and often try to f*ck them over (as Lewis did to one Frenchman - read the book to find out). However, some people are just always meant to be screwed over:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;You are proof that some people are born to be customers. (213)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Find this book on &lt;a href=&#34;https://www.amazon.com/Liars-Poker-Norton-Paperback-Michael/dp/039333869X/ref=sr_1_1?crid=24LK8FCCXGZDX&amp;amp;keywords=liar%27s+poker&amp;amp;qid=1565899441&amp;amp;s=books&amp;amp;sprefix=liar%27s+poker%2Caps%2C157&amp;amp;sr=1-1&#34; target=&#34;_blank&#34;&gt;Amazon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-four-by-scott-galloway&#34;&gt;&lt;em&gt;The Four&lt;/em&gt; by Scott Galloway&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;tf.png&#34; alt=&#34;The Four&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Galloway, a professor at NYU, paints a not-so-pretty picture of four firms that have shaped our current way of life: Apple, Amazon, Facebook, and Google. He begins the book with a chapter on each of the four companies, each one seeming to get more and more critical. Fun fact: Amazon actually took this book off of their online store for a while. Yay for freedom of speech violations!&lt;/p&gt;
+
+&lt;p&gt;He then continues on to explain &lt;em&gt;why&lt;/em&gt; these companies do so well, and how they are going to continue to do even better. He also describes the potential outcome of letting these companies expand indeterminately, and what we can do to help. Finally, he ends with advice on how to succeed in a world where these companies dominate.&lt;/p&gt;
+
+&lt;p&gt;He mostly argues that, given the extreme amount of money that these firms have, they are morally wrong for not putting it to better use. For example, Amazon spents a huge amount on new innovative technologies each year, about 50% of which fail and are never mentioned or addressed ever again. What if Amazon put all of that money into the public education system? These are the kinds of arguments Galloway pounds home in this book.&lt;/p&gt;
+
+&lt;p&gt;One of my favorite arguments is in the Apple chapter, where he talks about the sex appeal that the company generates. It&amp;rsquo;s unlikely that a $1000 iPhone is much better than an Android that is $400 cheaper, but people have come to idolize Apple products and see them as &amp;ldquo;sexy&amp;rdquo;. Apple generates a colossal amount of revenue with this stigma.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Biggest Takeaway&lt;/strong&gt;: Yes, these companies have near-monopolies in their respective sectors, but they have carefully crafted these monopolies. They&amp;rsquo;re extremely good at what they do, and unless we find another company that does e-commerce better than Amazon or search better than Google, we have to deal with what we&amp;rsquo;ve got.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;All successful businesses appeal to one of three areas of the body — the brain, the heart, or the genitals. (163)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Find this book (ironically) on &lt;a href=&#34;https://www.amazon.com/Four-Hidden-Amazon-Facebook-Google/dp/0735213658/ref=sr_1_1?keywords=the+four&amp;amp;qid=1565900258&amp;amp;s=books&amp;amp;sr=1-1&#34; target=&#34;_blank&#34;&gt;Amazon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;cat-s-cradle-by-kurt-vonnegut&#34;&gt;&lt;em&gt;Cat&amp;rsquo;s Cradle&lt;/em&gt; by Kurt Vonnegut&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;cc.png&#34; alt=&#34;Cat&#39;s Cradle&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the lone fiction book I read this summer, and I absolutely loved it. I had read &lt;em&gt;Slaughterhouse-Five&lt;/em&gt; and &lt;em&gt;Breakfast of Champions&lt;/em&gt; before and loved them both, so I was sure that &lt;em&gt;Cat&amp;rsquo;s Cradle&lt;/em&gt; would not disappoint, and it did not.&lt;/p&gt;
+
+&lt;p&gt;The book follows the main protagonist Jonah as he looks to learn more about the creator of the atom bomb, Felix Hoenikker. He ends up travelling to the fictional San Lorenzo with Hoenikker&amp;rsquo;s children Frank, Newton, and Angela. Their father also invented a substance called ice-nine, which turns any water that it touches into water immediately.&lt;/p&gt;
+
+&lt;p&gt;The book is largely an argument on war and the arms race, with subtle hints about religion. This book is a quick read and I highly recommend it to anyone.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Biggest Takeaway&lt;/strong&gt;: anything can change in a moment&amp;rsquo;s notice. Make sure to take everything all in while you still can.&lt;/p&gt;
+
+&lt;p&gt;Find this book on &lt;a href=&#34;https://www.amazon.com/Cats-Cradle-Novel-Kurt-Vonnegut/dp/038533348X/ref=sr_1_2?keywords=cat%27s+cradle&amp;amp;qid=1565900661&amp;amp;s=books&amp;amp;sr=1-2&#34; target=&#34;_blank&#34;&gt;Amazon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;think-and-grow-rich-by-napoleon-hill&#34;&gt;&lt;em&gt;Think and Grow Rich&lt;/em&gt; by Napoleon Hill&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;tagr.jpeg&#34; alt=&#34;Think and Grow Rich&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This book, along with &lt;em&gt;How to Win Friends and Influence People&lt;/em&gt; by Dale Carnegie, is considered one of the original self-help books. Written in 1937, this book contains a 12-step program toward achieving your financial goals.&lt;/p&gt;
+
+&lt;p&gt;To be honest, I was not a huge fan of this book. Hill takes finance from a very spiritual perspective, talking about &amp;ldquo;raising frequencies of thoughts&amp;rdquo; so that the &amp;ldquo;Infinite Intelligence&amp;rdquo; can receive them. He talks a lot about how to train your sub-conscious mind to receive better ideas.&lt;/p&gt;
+
+&lt;p&gt;Although, one point that I really appreciated was his argument about the necessity of having a &lt;em&gt;crystal clear&lt;/em&gt; vision of what you want. Saying &amp;ldquo;I want money&amp;rdquo; does not suffice; instead, try &amp;ldquo;I want money from creating a successful and profitable iPhone application that I will release in December of this year&amp;rdquo; (possible foreshadowing from Dylan???)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Biggest Takeaway&lt;/strong&gt;: make a clear plan for creating the wealth that you desire. Read it to yourself every day, and never let it slip your mind. Get as specific as possible.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The successful leader must plan his work, and work his plan. (128)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Find this book on &lt;a href=&#34;https://www.amazon.com/Think-Grow-Rich-Publication-Foundation-ebook/dp/B07P896HSJ/ref=sr_1_1_sspa?crid=26DVSBZU7ABHL&amp;amp;keywords=think+and+grow+rich&amp;amp;qid=1565900683&amp;amp;s=books&amp;amp;sprefix=think+%2Cstripbooks%2C171&amp;amp;sr=1-1-spons&amp;amp;psc=1&amp;amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExODZBRUtKNTRPNERGJmVuY3J5cHRlZElkPUEwODM5MzY4VExDQUQxUzU1T1hWJmVuY3J5cHRlZEFkSWQ9QTAzMzkzNzhNSFRJRjZWTjFCMkkmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl&#34; target=&#34;_blank&#34;&gt;Amazon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;effective-java-by-josh-bloch&#34;&gt;&lt;em&gt;Effective Java&lt;/em&gt; by Josh Bloch&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;ej.jpeg&#34; alt=&#34;Effective Java&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This book needs no explanation. It&amp;rsquo;s simply the best book out there on Java development, and is an absolutely necessity for anyone consistently using Java. He talks not only about design patterns, but also about common Java libraries and how to use them effectively. Please read this book.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Biggest Takeaway&lt;/strong&gt;: Streams. Are. Awesome.&lt;/p&gt;
+
+&lt;p&gt;Find this book on &lt;a href=&#34;https://www.amazon.com/Effective-Java-Joshua-Bloch/dp/0134685997/ref=sr_1_3?keywords=effective+java&amp;amp;qid=1565901196&amp;amp;s=books&amp;amp;sr=1-3&#34; target=&#34;_blank&#34;&gt;Amazon&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lessons I Learned as an Intern</title>
+      <link>https://dylandpowers.github.io/personal/post/lessons-i-learned-as-an-intern/</link>
+      <pubDate>Tue, 13 Aug 2019 13:49:31 -0600</pubDate>
+      <guid>https://dylandpowers.github.io/personal/post/lessons-i-learned-as-an-intern/</guid>
+      <description>
+
+&lt;p&gt;I’m about to finish up my internship as a Software Engineer Intern at Yext in New York City (HQ). Over the past 12 weeks, I’ve learned a lot not only about Java, but also about best practices and how to truly succeed as a developer in today’s fast-moving world. I wanted to share these lessons, hoping that some of you can apply them as you try to make the next step in your career.&lt;/p&gt;
+
+&lt;h2 id=&#34;write-code-for-humans-not-for-machines&#34;&gt;Write Code for Humans, not for Machines&lt;/h2&gt;
+
+&lt;p&gt;I learned this quickly and early on, as a lot of my code review comments related to naming conventions or making code blocks easier to digest for other developers. After learning this, I believe that every developer needs to apply this mantra as early as possible. It’s the quickest and most surefire way to show that you have what it takes to become an elite contributor.&lt;/p&gt;
+
+&lt;p&gt;You will spend a lot of your time reading code, especially as an intern. When somebody hands you a new project or bug fix on a service that you have never touched before, you will usually spend the first hour or so just digesting code. Unfortunately, this initial read-through can get quite drawn out if the code doesn’t make sense to an average person.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;code.jpeg&#34; alt=&#34;Code on a laptop&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Readability is king.&lt;/em&gt; It makes teams more efficient and agile, and the program will work the exact same regardless. Consider the following Java code snippets, both of which always return the same result:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Map&amp;lt;Long, Long&amp;gt; convert(Map&amp;lt;Long, Long&amp;gt; map1, Map&amp;lt;Long, Long&amp;gt; map2) {
+    Map&amp;lt;Long, Long&amp;gt; ret = new HashMap&amp;lt;&amp;gt;();
+    for (Map.Entry&amp;lt;Long, Long&amp;gt; e : map1.entrySet()) {                              
+        ret.put(e.getKey(), map2.get(e.getValue()));
+    }
+    return ret;
+}
+
+Map&amp;lt;Long, Long&amp;gt; getCustomerIdToProductId(
+    Map&amp;lt;Long, Long&amp;gt; customerIdToPurchaseId,
+    Map&amp;lt;Long, Long&amp;gt; purchaseIdToProductId)
+{
+    Map&amp;lt;Long, Long&amp;gt; customerIdToProductId = new HashMap&amp;lt;&amp;gt;();
+    for (Map.Entry&amp;lt;Long, Long&amp;gt; entry : customerIdToPurchaseId.entrySet()) {
+        customerIdToProductId.put(entry.getKey(),
+            purchaseIdToProductId.get(entry.getValue());
+    }
+    return customerIdToProductId;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Clearly, the first example gives no indication what *actually *gets computed in the snippet. The developer that wrote the code knew what the code did, so he or she felt no need to write comments or name variables appropriately. As a consequence, any future developer reading the snippet would struggle immensely to understand what happens in the code.&lt;/p&gt;
+
+&lt;p&gt;Conversely, the second snippet explains everything. The method declaration conveys the purpose of the method, and the variable names communicate the data that they hold clearly and concisely. Any future developer would have no trouble quickly understanding what this code does. This makes a world of difference in small teams, especially when dealing with large code bases.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I learned:&lt;/strong&gt; Don’t just write code that works; write code that works &lt;strong&gt;and&lt;/strong&gt; is readable, concise, and effective. Yes, it requires a little more effort to name things carefully, but I guarantee your team members will thank you for it later. This will speed up processes for years to come, and it shows that you understand that code is &lt;strong&gt;not only for machines to read.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;plan-first&#34;&gt;Plan First&lt;/h2&gt;
+
+&lt;p&gt;On one of my larger stories this summer, I tried to start immediately without planning. For the first ten or so hours, things &lt;em&gt;seemed&lt;/em&gt; to be going fine. I had written several classes, interfaces, and tests, and had confidence that all of the inputs and outputs worked correctly. Later on, I discovered that the way I had implemented the system wasn’t compliant with existing infrastructure — essentially, I had to rewrite the code from scratch 😢.&lt;/p&gt;
+
+&lt;p&gt;Especially when taking on larger stories/projects, do not &lt;strong&gt;ever&lt;/strong&gt; dive into the code before planning. Yes, we all know the &lt;em&gt;fun&lt;/em&gt; part of the job involves writing lines upon lines of code and seeing it work in production. However, without proper planning (the admittedly not-as-exciting part of the job), it’ll be much harder to ever see your code in production.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;featured.jpg&#34; alt=&#34;code on whiteboard&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The way I see it, planning involves several steps, each of them equally important:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Define the problem in &lt;strong&gt;the most specific way possible.&lt;/strong&gt; This way, you know &lt;em&gt;exactly&lt;/em&gt; what to think about in the next step.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Think about the problem from a birds-eye view, and determine the high-level classes or components that will comprise the system. Then, define how those components will interact with each other.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Break the task down into several smaller sub-tasks, and get to work.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After my initial mistake, I made a promise to always spend at least 10% of the estimated time for a task planning for it. &lt;strong&gt;What I learned&lt;/strong&gt;: By planning things out and batching them into small sub-tasks, you can actually produce effective code much quicker than before.&lt;/p&gt;
+
+&lt;p&gt;I also find it very useful to &lt;strong&gt;draw system diagrams.&lt;/strong&gt; Don’t just write in words what you plan to do, but get creative with shapes and lines to really visualize how a whole system will come together. If necessary, tear this page out of your notebook so that you can always see it throughout the whole development process. This made me a more effective developer this summer because I could easily detect code smells and know which classes interacted with each other.&lt;/p&gt;
+
+&lt;h2 id=&#34;ask-lots-of-questions&#34;&gt;Ask Lots of Questions&lt;/h2&gt;
+
+&lt;p&gt;I mean &lt;strong&gt;LOTS&lt;/strong&gt; of questions. I genuinely think it would take me hours to scroll through my Slack messages with my mentor — because I never relented in asking questions. At first, I was admittedly scared of asking too many questions; I thought it made me look amateur, like I didn’t deserve to have this job. However, my mentor and my team quickly assured me that I not only &lt;em&gt;can&lt;/em&gt; ask more questions, but I &lt;em&gt;should&lt;/em&gt; ask more questions. Instead of being indicative of lack of experience (negative), it’s actually &lt;em&gt;highly&lt;/em&gt; indicative of natural curiosity (a &lt;em&gt;huge&lt;/em&gt; positive in the engineering world).&lt;/p&gt;
+
+&lt;p&gt;So I did. I asked questions about Java. I asked questions about design patterns. I asked questions about things from tech culture to message processing to career advancement. If I didn’t understand how something worked, I walked across the room and asked someone who knew how that thing worked. People were always happy to spend any amount of time explaining something to me, which I am beyond grateful for.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I learned:&lt;/strong&gt; It’s much more important to understand the “how”, rather than just the “what”, and asking questions is a great way to bridge the gap. Understanding the “what” means understanding what code works in certain areas, and what code doesn’t. This doesn’t indicate any high-level understanding, but merely shows ability to remember things well. Understanding the “how” is much more impressive, because it means the ability to think deeply about systems and apply that knowledge when making future systems. By asking questions, I could finally understand how the architectural components work together, and how to approach problems at a high level on my own. Now, when in the process of planning, I write down several questions that I later ask to the owner of the service that I’m working on.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bonus:&lt;/strong&gt; when asking questions, try to do it in person rather than over Slack/IM. It’s a lot more personal, and it allows you to ask follow-up questions much faster.&lt;/p&gt;
+
+&lt;p&gt;I would not trade this experience for anything in the world. Yext is a fast-growing company full of extremely talented individuals that I consider myself lucky to surround myself with. I’ve learned a lot about both tech and myself throughout this incredible summer in the center of the universe, New York City.&lt;/p&gt;
+
+&lt;p&gt;I’ve grown more this summer as a developer than maybe in my first three years of undergrad. I realized there’s &lt;em&gt;so&lt;/em&gt; much that the undergraduate education that gets left out, but I’m forever grateful for getting the opportunity to learn so all of the other bits and pieces this summer.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rule Changes in Extemp</title>
+      <link>https://dylandpowers.github.io/personal/post/rule-changes-in-extemp/</link>
+      <pubDate>Tue, 13 Aug 2019 13:46:26 -0600</pubDate>
+      <guid>https://dylandpowers.github.io/personal/post/rule-changes-in-extemp/</guid>
+      <description>
+
+&lt;p&gt;My sophomore year of college, I co-founded the Duke Speech team with a buddy of mine. Speech and debate was such an integral part of my high school experience, and I still wanted to compete. So, after mounds of administrative paperwork, my friend and I finally had made our dream come true — Duke’s very own competitive speaking team.&lt;/p&gt;
+
+&lt;p&gt;The structure of the college circuit is quite different from HS. First off, there is no traditional debate like Public Forum or Lincoln-Douglas. Well, there’s a modified Lincoln-Douglas that is actually more policy-oriented, but it’s still not traditional. Students mainly debate in &lt;a href=&#34;http://www.ipdadebate.info/&#34; target=&#34;_blank&#34;&gt;International Parliamentary Debate Association rules&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In terms of speech, there are some events from HS like Original Oratory, Extemporaneous Speaking, and Dramatic Interpretation; the college circuit also created some &lt;a href=&#34;https://sites.google.com/site/afanietnew2/products-services/event-descriptions&#34; target=&#34;_blank&#34;&gt;new ones&lt;/a&gt; like After-Dinner Speaking and Communication Analysis. There are typically only 2 preliminary rounds, and then students break straight to finals (at least at small to mid-size tournaments, this is the case).&lt;/p&gt;
+
+&lt;p&gt;In February 2019, 6 members of our team made the trip to Baton Rouge, Louisiana to compete at the &lt;a href=&#34;https://www.collegeforensics.org/tournament/2019-mardi-gras-alumni-swing-tournament-pt-1&#34; target=&#34;_blank&#34;&gt;Mardi Gras Alumni Invitational&lt;/a&gt; at LSU. I compete in Extemporaneous Speaking, where students are given 30 minutes to prepare a 7 minute speech based on a question. When I was in high school, students could &lt;strong&gt;not&lt;/strong&gt; use the internet and students had to &lt;strong&gt;completely memorize&lt;/strong&gt; the speech. When preparing speeches, students can use any offline resources; most teams made use of &lt;a href=&#34;https://www.dropbox.com/&#34; target=&#34;_blank&#34;&gt;DropBox&lt;/a&gt;, &lt;a href=&#34;https://prepd.in/&#34; target=&#34;_blank&#34;&gt;Prepd&lt;/a&gt;, or physical articles.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;featured.jpeg&#34; alt=&#34;An Extemporaneous Speaking prep room, with students making use of physical articles.&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, there have been some major rule changes:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Students can now use the internet when preparing their speeches.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Students can read from one 3&amp;rdquo; x 5&amp;rdquo; note card during the speech.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Let’s talk about these.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-use-of-internet&#34;&gt;The use of internet&lt;/h2&gt;
+
+&lt;p&gt;It’s worth noting that the high school speech and debate governing body, the &lt;a href=&#34;https://www.speechanddebate.org/&#34; target=&#34;_blank&#34;&gt;National Speech and Debate Association&lt;/a&gt;, is also piloting this rule change as of last year.&lt;/p&gt;
+
+&lt;p&gt;In my opinion, part of the intellectual challenge of Extemp comes from having to stay up to date with current events. Students who challenged themselves to read the news every day and form their own viewpoints would perform better in the 30-minute time crunch because they had already shaped a unique perspective on the state of affairs.&lt;/p&gt;
+
+&lt;p&gt;With internet available, part of this intellectual challenge is lost. Students have the whole world of news at their fingertips thanks to Google, which really evens the playing field. Personally, I think we have lost a core value of Extemp here (and speech and debate in general), which is to make ourselves more involved citizens of the world.&lt;/p&gt;
+
+&lt;p&gt;As a counter-argument to myself, I understand why both the NSDA and the &lt;a href=&#34;https://www.americanforensicsassoc.org/&#34; target=&#34;_blank&#34;&gt;American Forensic Association&lt;/a&gt; created this rule. Previously, larger teams could usually fare better with DropBox or Prepd-based solutions because they had more manpower to save articles. Small teams would suffer, because they simply could not save enough information. Maybe we need to find a middle ground.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-use-of-note-cards&#34;&gt;The use of note cards&lt;/h2&gt;
+
+&lt;p&gt;I don’t believe there’s a counter-argument to my idea that we should get rid of this rule altogether. Again, part of the draw of Extemp is the intellectual challenge that comes behind having to memorize a handful of source material in such a short time-frame. The note card completely eliminates this draw, at least for me.&lt;/p&gt;
+
+&lt;p&gt;In my opinion, every student, whether in high school or college, should experience speech and debate for at least one year. If not for the incredible community and amazing friends you will meet along the way, do it for the intellectual engagement that’s difficult to find anywhere else.&lt;/p&gt;
+
+&lt;p&gt;Where I coach Extemp, at &lt;a href=&#34;http://www.dadebate.com/&#34; target=&#34;_blank&#34;&gt;Durham Academy&lt;/a&gt;, we still encourage our students to do research and save articles &lt;em&gt;even though&lt;/em&gt; they can still use internet at tournaments. We believe it makes them more well-rounded as competitors. If all coaches took this same path (which I encourage them to take), we could continue to emphasize one of the core values of Extemp: to make ourselves more well-rounded citizens of the world.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Extensions in Swift</title>
+      <link>https://dylandpowers.github.io/personal/post/extensions-in-swift/</link>
+      <pubDate>Tue, 13 Aug 2019 13:25:02 -0600</pubDate>
+      <guid>https://dylandpowers.github.io/personal/post/extensions-in-swift/</guid>
+      <description>
+
+&lt;p&gt;Today we’re going to talk about what I think is Swift’s coolest feature — extensions.&lt;/p&gt;
+
+&lt;p&gt;Extensions allow you to add functionality to an already existing class. In one of my recent projects, I implemented an &lt;a href=&#34;https://en.wikipedia.org/wiki/Optical_character_recognition&#34; target=&#34;_blank&#34;&gt;OCR&lt;/a&gt; model that could read text (specifically, a credit card number) from a picture that the user took with the back camera. Unfortunately, if the image wasn’t oriented upwards, the OCR fails, as we would expect. As such, I needed a convenient way to change the orientation of the image with ease.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;featured.jpg&#34; alt=&#34;Credit cards&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I quickly found some &lt;a href=&#34;https://gist.github.com/schickling/b5d86cb070130f80bb40&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt; that could easily convert an image (thanks to GitHub user Johannes Schickling for this). Here are the workflows with and without extensions:&lt;/p&gt;
+
+&lt;h2 id=&#34;without-extensions&#34;&gt;Without Extensions&lt;/h2&gt;
+
+&lt;p&gt;Without extensions, the workflow is similar to that of any typical Object-Oriented language. The developer would create a class that performed the orientation fix, and name it accordingly:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class ImageOrientationFixer {
+    init() { }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The user would then write a method that takes the image as a parameter, and returns an image with the new fixed orientation.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class ImageOrientationFixer {
+    init() { }
+
+    func changeOrientationToUpright(_ image : UIImage) -&amp;gt; UIImage {
+        // code to correct the orientation
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There are two major problems with this:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;In every subsequent class that requires this functionality, we would have to instantiate a new &lt;code&gt;ImageOrientationFixer&lt;/code&gt; . A quick solution would be to just make the method &lt;code&gt;static&lt;/code&gt; , which leads into&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;This requires passing the image object to the fixer on every call. Any situation where a client calls a function, passes it a mutable object, and receives the same (modified) object in return is a &lt;strong&gt;blatant&lt;/strong&gt; code smell, and indicative of a poorly designed API.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Alternatively, the method &lt;em&gt;could&lt;/em&gt; return void and simply change some attributes of the image along the way. However, since the callee can still change the image at will, this is still a code smell.&lt;/p&gt;
+
+&lt;h2 id=&#34;with-extensions&#34;&gt;With Extensions&lt;/h2&gt;
+
+&lt;p&gt;Extensions fix both of the problems outlined above. Instead of creating a new class that does this, we can &lt;strong&gt;add that functionality to Swift’s &lt;code&gt;UIImage&lt;/code&gt; class.&lt;/strong&gt; This means that we can just directly call our new function on the image object itself. This solves the problems outlined above, because the client then never gives up control of the image object. The declaration looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;extension UIImage {
+    func changeOrientationToUpright() {
+        // code to correct the orientation
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, anytime I want to change the orientation of some &lt;code&gt;image&lt;/code&gt; object that I have, I simply call &lt;code&gt;image.changeOrientationToUpright()&lt;/code&gt; and all my dreams come true.&lt;/p&gt;
+
+&lt;p&gt;Extensions have a multitude of use cases, all of which make any mobile developer’s life much easier. Most importantly, they eliminate cases where a client would otherwise pass a mutable object to another class for processing. If you haven’t already, give Extensions a shot!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DUU Alumni Database</title>
+      <link>https://dylandpowers.github.io/personal/project/duu-alumni-database/</link>
+      <pubDate>Sat, 20 Apr 2019 17:10:21 -0600</pubDate>
+      <guid>https://dylandpowers.github.io/personal/project/duu-alumni-database/</guid>
+      <description>&lt;p&gt;As a developer for &lt;a href=&#34;https://duuke.org&#34; target=&#34;_blank&#34;&gt;Duke University Union&lt;/a&gt;, I created a web-based alumni database to keep track of past and present DUU members. The main purpose of this database is for current members to network and recruit with past members.&lt;/p&gt;
+
+&lt;p&gt;The database can be accessed &lt;a href=&#34;duualumni.herokuapp.com&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. The page is served with &lt;a href=&#34;https://nodejs.org/&#34; target=&#34;_blank&#34;&gt;Node.js&lt;/a&gt;, and uses &lt;a href=&#34;https://expressjs.com/&#34; target=&#34;_blank&#34;&gt;ExpressJS&lt;/a&gt; as the backend framework and &lt;a href=&#34;https://angularjs.org/&#34; target=&#34;_blank&#34;&gt;AngularJS&lt;/a&gt; as the frontend framework. The frontend styling comes from &lt;a href=&#34;https://getbootstrap.com/&#34; target=&#34;_blank&#34;&gt;Bootstrap&lt;/a&gt;. The app is hosted with &lt;a href=&#34;https://www.heroku.com/&#34; target=&#34;_blank&#34;&gt;Heroku&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;All of the data is stored in a Google Sheet which is populated by a Google Form sent out to new members every semester. On load, the web app makes a call to the Google Sheets API to obtain the data, authenticating as necessary.&lt;/p&gt;
+
+&lt;p&gt;Code for this project can be found &lt;a href=&#34;https://github.com/dylandpowers/DUU-Alumni-Page&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Alexa Transloc Skill</title>
+      <link>https://dylandpowers.github.io/personal/project/alexa-transloc-skill/</link>
+      <pubDate>Wed, 20 Mar 2019 13:19:46 -0600</pubDate>
+      <guid>https://dylandpowers.github.io/personal/project/alexa-transloc-skill/</guid>
+      <description>&lt;p&gt;This is an extension of the popular bus time arrival application &lt;a href=&#34;https://transloc.com/&#34; target=&#34;_blank&#34;&gt;Transloc&lt;/a&gt;. Students at Duke and other universities use this app to find out when the next bus is coming to a certain stop so that they can plan accordingly.&lt;/p&gt;
+
+&lt;p&gt;Using the Alexa Skills Builder, AWS Lambda, and the Transloc API, I created a voice-enabled Alexa application that mimics Transloc functionality. When the application starts, it invokes a Lambda function that makes a GET request to the Transloc API about arrival times, and then speaks the results to the user. Users have several phrases at their disposal that will activate the app:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;When is the first {bus} arriving at {stop}?&lt;/p&gt;
+
+&lt;p&gt;When is the next {bus} coming to {stop}?&lt;/p&gt;
+
+&lt;p&gt;When is the {bus} coming to {stop}?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Students replace the bracketed keywords with actual names of stops and busses at Duke that the application recognizes.&lt;/p&gt;
+
+&lt;p&gt;Source code for the application can be found &lt;a href=&#34;https://github.com/dylandpowers/Alexa-Duke-Transloc&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Authorable Game Engine</title>
+      <link>https://dylandpowers.github.io/personal/project/authorable-game-engine/</link>
+      <pubDate>Fri, 20 Apr 2018 17:27:45 -0600</pubDate>
+      <guid>https://dylandpowers.github.io/personal/project/authorable-game-engine/</guid>
+      <description>&lt;p&gt;As part of my Advanced Software Design class (CS308) at Duke, our final project involved building out an authorable game engine in Java in a team of 10. We split into four sub-teams: authoring environment, engine, game player, and game data.&lt;/p&gt;
+
+&lt;p&gt;Two other students and I implemented the authoring environment. Users can drag-and-drop entities into the game grid, and set certain properties on those entities. The user can also define how certain entities move and how much power the player has. We made extensive use of design patterns such as the factory pattern, the builder pattern, MVC, and reflection.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Academic</title>
+    <link>https://dylandpowers.github.io/personal/project/</link>
+      <atom:link href="https://dylandpowers.github.io/personal/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 20 Apr 2019 17:10:21 -0600</lastBuildDate>
+    <image>
+      <url>https://dylandpowers.github.io/personal/img/icon-192.png</url>
+      <title>Projects</title>
+      <link>https://dylandpowers.github.io/personal/project/</link>
+    </image>
+    
+    <item>
+      <title>DUU Alumni Database</title>
+      <link>https://dylandpowers.github.io/personal/project/duu-alumni-database/</link>
+      <pubDate>Sat, 20 Apr 2019 17:10:21 -0600</pubDate>
+      <guid>https://dylandpowers.github.io/personal/project/duu-alumni-database/</guid>
+      <description>&lt;p&gt;As a developer for &lt;a href=&#34;https://duuke.org&#34; target=&#34;_blank&#34;&gt;Duke University Union&lt;/a&gt;, I created a web-based alumni database to keep track of past and present DUU members. The main purpose of this database is for current members to network and recruit with past members.&lt;/p&gt;
+
+&lt;p&gt;The database can be accessed &lt;a href=&#34;duualumni.herokuapp.com&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. The page is served with &lt;a href=&#34;https://nodejs.org/&#34; target=&#34;_blank&#34;&gt;Node.js&lt;/a&gt;, and uses &lt;a href=&#34;https://expressjs.com/&#34; target=&#34;_blank&#34;&gt;ExpressJS&lt;/a&gt; as the backend framework and &lt;a href=&#34;https://angularjs.org/&#34; target=&#34;_blank&#34;&gt;AngularJS&lt;/a&gt; as the frontend framework. The frontend styling comes from &lt;a href=&#34;https://getbootstrap.com/&#34; target=&#34;_blank&#34;&gt;Bootstrap&lt;/a&gt;. The app is hosted with &lt;a href=&#34;https://www.heroku.com/&#34; target=&#34;_blank&#34;&gt;Heroku&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;All of the data is stored in a Google Sheet which is populated by a Google Form sent out to new members every semester. On load, the web app makes a call to the Google Sheets API to obtain the data, authenticating as necessary.&lt;/p&gt;
+
+&lt;p&gt;Code for this project can be found &lt;a href=&#34;https://github.com/dylandpowers/DUU-Alumni-Page&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Alexa Transloc Skill</title>
+      <link>https://dylandpowers.github.io/personal/project/alexa-transloc-skill/</link>
+      <pubDate>Wed, 20 Mar 2019 13:19:46 -0600</pubDate>
+      <guid>https://dylandpowers.github.io/personal/project/alexa-transloc-skill/</guid>
+      <description>&lt;p&gt;This is an extension of the popular bus time arrival application &lt;a href=&#34;https://transloc.com/&#34; target=&#34;_blank&#34;&gt;Transloc&lt;/a&gt;. Students at Duke and other universities use this app to find out when the next bus is coming to a certain stop so that they can plan accordingly.&lt;/p&gt;
+
+&lt;p&gt;Using the Alexa Skills Builder, AWS Lambda, and the Transloc API, I created a voice-enabled Alexa application that mimics Transloc functionality. When the application starts, it invokes a Lambda function that makes a GET request to the Transloc API about arrival times, and then speaks the results to the user. Users have several phrases at their disposal that will activate the app:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;When is the first {bus} arriving at {stop}?&lt;/p&gt;
+
+&lt;p&gt;When is the next {bus} coming to {stop}?&lt;/p&gt;
+
+&lt;p&gt;When is the {bus} coming to {stop}?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Students replace the bracketed keywords with actual names of stops and busses at Duke that the application recognizes.&lt;/p&gt;
+
+&lt;p&gt;Source code for the application can be found &lt;a href=&#34;https://github.com/dylandpowers/Alexa-Duke-Transloc&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Authorable Game Engine</title>
+      <link>https://dylandpowers.github.io/personal/project/authorable-game-engine/</link>
+      <pubDate>Fri, 20 Apr 2018 17:27:45 -0600</pubDate>
+      <guid>https://dylandpowers.github.io/personal/project/authorable-game-engine/</guid>
+      <description>&lt;p&gt;As part of my Advanced Software Design class (CS308) at Duke, our final project involved building out an authorable game engine in Java in a team of 10. We split into four sub-teams: authoring environment, engine, game player, and game data.&lt;/p&gt;
+
+&lt;p&gt;Two other students and I implemented the authoring environment. Users can drag-and-drop entities into the game grid, and set certain properties on those entities. The user can also define how certain entities move and how much power the player has. We made extensive use of design patterns such as the factory pattern, the builder pattern, MVC, and reflection.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
