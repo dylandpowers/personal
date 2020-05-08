@@ -18,35 +18,53 @@ subtitle = ""
   icon = "java"
   icon_pack = "fab"
   name = "Java"
-  description = "85%"
-  
-[[feature]]
-  icon = "git"
-  icon_pack = "fab"
-  name = "Git"
-  description = "70%"  
-
-[[feature]]
-  icon = "pencil-ruler"
-  icon_pack = "fas"
-  name = "Software Design"
-  description = "60%"
-  
-[[feature]]
-  icon = "js-square"
-  icon_pack = "fab"
-  name = "JavaScript"
-  description = "50%"
+  description = "Advanced"
 
 [[feature]]
   icon = "mobile"
   icon_pack = "fas"
   name = "Swift/iOS Development"
-  description = "40%"
+  description = "Advanced"
+
+[[feature]]
+  icon = "react"
+  icon_pack = "fab"
+  name = "React/React Native"
+  description = "Intermediate"
+  
+[[feature]]
+  icon = "git"
+  icon_pack = "fab"
+  name = "Git"
+  description = "Intermediate"
+
+[[feature]]
+  icon = "pencil-ruler"
+  icon_pack = "fas"
+  name = "Software Design"
+  description = "Intermediate"
+  
+[[feature]]
+  icon = "js-square"
+  icon_pack = "fab"
+  name = "JavaScript"
+  description = "Intermediate"
+
+[[feature]]
+  icon = "building"
+  icon_pack = "fas"
+  name = "Bazel"
+  description = "Intermediate"
 
 [[feature]]
   icon = "database"
   icon_pack = "fas"
   name = "Databases"
-  description = "30%"
+  description = "Familiar"
+
+[[feature]]
+  icon = "html5"
+  icon_pack = "fab"
+  name = "HTML/CSS"
+  description = "Familiar"
 +++

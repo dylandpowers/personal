@@ -10,21 +10,20 @@ authors:
 superuser: true
 
 # Role/position
-role: Student at Duke University
+role: Software Engineer at Yext
 
 # Organizations/Affiliations
 organizations:
-- name: Duke University
-  url: "https://www.duke.edu/"
+- name: Yext
+  url: "https://yext.com"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My interests include mobile app development, design patterns, scalability, and tech company culture.
 
 interests:
 - Design patterns
-- Scalability
-- Mobile application development
-- Tech company culture
+- Web app development
+- Mobile app development
 
 education:
   courses:
@@ -60,6 +59,8 @@ email: ""
 # user_groups:
 ---
 
-Dylan is a senior at Duke University majoring in Electrical and Computer Engineering and Computer Science and minoring in Economics. Dylan's technical interests include design patterns, software scalability, and mobile application development. Dylan recently interned as a Software Engineer for [Yext](https://yext.com), where he will be returning as a full-time Software Engineer in August 2020. Dylan currently develops for [OurSpace](https://ourspaceapp.com), a real-time Q&A platform for locations & spaces.
+Dylan is a lifelong learner who loves to live on the bleeding edge of technology. Dylan's technical interests include design patterns, web apps, and mobile application development. Dylan interned as a Software Engineer for [Yext](https://yext.com), where he will be returning as a full-time Software Engineer in New York City in June 2020. 
 
-At Duke, Dylan is a teaching assistant for three classes and is the founder and president of Duke Speech, Duke's competitive speaking team. Dylan also serves as a researcher for student government, a developer for the university union, and a tour guide for the Pratt School of Engineering. Dylan also serves as the head extemporaneous speaking coach for Durham Academy. 
+Throughout his senior year at Duke, Dylan worked in a sleeves-rolled-up role as a freelance Software Engineer for [OurSpace](https://ourspaceapp.com), where he did everything from setting up servers on AWS to creating user-friendly interfaces in Swift.
+
+Outside of the world of tech, Dylan loves snowboarding, reading, and running as often as he can. 

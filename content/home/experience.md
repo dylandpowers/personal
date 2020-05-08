@@ -18,6 +18,16 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
+  title = "Software Engineer"
+  company = "Yext"
+  company_url = "https://www.yext.com/"
+  location = "New York"
+  date_start = "2020-06-22"
+  date_end = ""
+  description = """Team TBD"""
+
+
+[[experience]]
   title = "Software Engineering Intern"
   company = "Yext"
   company_url = "https://www.yext.com/"
@@ -53,10 +63,16 @@ Developed PostgreSQL data model for storing normalization mappings. Created UI w
   company_url = "https://www.cs.duke.edu/"
   location = "North Carolina"
   date_start = "2018-01-20"
-  date_end = ""
-  description = """Present: UTA for Advanced Software Design (CS308; S19, F19), Computational Genomics (CS260; F18, F19), and Digital Systems (ECE350; S19, F19). I grade student projects and hold office hours, as well as mentor several students for software design, helping them to implement design patterns and use SOLID principles in large software projects.
+  date_end = "2020-04-22"
+  description = """Advanced Software Design (CS308; S19, F19, S20)
 
-Past: UTA for Data Structures and Algorithms (CS201; S18) and Software Design (CS307; S19). Held weekly recitation sessions, held office hours, graded, and answered Piazza posts."""
+Software Design (CS307; S19, S20)
+
+Computational Genomics (CS260; F18, F19)
+
+Digital Systems (ECE350; S19, F19, S20)
+
+Data Structures and Algorithms (CS201; S18)"""
 
 [[experience]]
   title = "Head Coach, Extemporaneous Speaking"
@@ -64,7 +80,7 @@ Past: UTA for Data Structures and Algorithms (CS201; S18) and Software Design (C
   company_url = "https://www.dadebate.com/"
   location = "North Carolina"
   date_start = "2016-08-23"
-  date_end = ""
+  date_end = "2019-08-23"
   description = """Coach the extemporaneous speaking team of 8 students on Durham Academy's speech and debate team. Practices consist of one-on-one speaking drills and practice speeches to prepare students for various tournaments. Have coached 5 different top 6 state finishers since 2018."""
 
 +++
