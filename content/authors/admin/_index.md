@@ -18,7 +18,7 @@ organizations:
   url: "https://yext.com"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My interests include mobile app development, design patterns, scalability, and tech company culture.
+bio: My interests include mobile app development, web app development, and design patterns.
 
 interests:
 - Design patterns
