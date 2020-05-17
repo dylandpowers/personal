@@ -27,7 +27,7 @@ interests:
 
 education:
   courses:
-  - course: B.S.E. in Electrical and Computer Engineering
+  - course: B.S.E. in Electrical and Computer Engineering (Cum Laude)
     institution: Duke University
     year: 2020
   - course: B.S. in Computer Science
