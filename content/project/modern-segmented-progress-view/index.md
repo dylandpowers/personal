@@ -2,10 +2,10 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Modern Segmented Progress View"
-summary: "A Cocoapod for creating segmented progress views."
+summary: "A Cocoapod for creating segmented progress views"
 authors: [Dylan Powers]
-tags: []
-categories: [Mobile, Swift]
+tags: [Swift, Cocoapods, Cocoa, Pods, Segmented, Progress, UIView, XCode, Apple]
+categories: [Mobile]
 date: 2020-06-20T16:05:06-04:00
 
 # Optional external URL for project (replaces project detail page).
