@@ -21,15 +21,15 @@ subtitle = ""
   description = "Advanced"
 
 [[feature]]
-  icon = "mobile"
-  icon_pack = "fas"
-  name = "Swift/iOS Development"
-  description = "Advanced"
-
-[[feature]]
   icon = "react"
   icon_pack = "fab"
   name = "React/React Native"
+  description = "Advanced"
+
+[[feature]]
+  icon = "mobile"
+  icon_pack = "fas"
+  name = "Swift/iOS Development"
   description = "Intermediate"
   
 [[feature]]
