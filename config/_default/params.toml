@@ -58,9 +58,9 @@ time_format = "3:04 PM"
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "dylan.powers@duke.edu"
+email = "dylandpowers@gmail.com"
 phone = "303 475 1909"
-address = "749 Ninth Street Apt. 253, Durham, NC 27705"
+address = "42 Battery Point Drive, Fredericksburg, VA 22406"
 
 # Office hours: use `<br>` to insert a line break, or set to "" to remove office hours
 office_hours = ""
