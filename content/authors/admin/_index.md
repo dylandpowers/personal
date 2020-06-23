@@ -18,9 +18,10 @@ organizations:
   url: "https://yext.com"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My interests include mobile app development, web app development, and design patterns.
+bio: My interests include e-commerce, mobile app development, web app development, and design patterns.
 
 interests:
+- E-commerce
 - Design patterns
 - Web app development
 - Mobile app development
@@ -59,7 +60,7 @@ email: ""
 # user_groups:
 ---
 
-Dylan is a lifelong learner who loves to live on the bleeding edge of technology. His technical interests include design patterns, web apps, and mobile application development. Dylan is most skilled with the React ecosystem; most recently, he created a [messaging app using React Native](https://github.com/dylandpowers/rn-messenger).
+Dylan is a lifelong learner who loves to live on the bleeding edge of technology. His technical interests include e-commerce, design patterns, web apps, and mobile application development. Dylan is most skilled with the React ecosystem; most recently, he created a [messaging app using React Native](https://github.com/dylandpowers/rn-messenger).
 
 Throughout his senior year at Duke, Dylan worked in a sleeves-rolled-up role as a freelance Software Engineer for [OurSpace](https://ourspaceapp.com), where he did everything from setting up servers on AWS to creating user-friendly interfaces in Swift. Dylan has created several mobile and web apps on his own.
 

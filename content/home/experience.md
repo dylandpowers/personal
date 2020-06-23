@@ -24,7 +24,7 @@ date_format = "Jan 2006"
   location = "New York"
   date_start = "2020-06-22"
   date_end = ""
-  description = """Team TBD"""
+  description = """Knowledge Manager group"""
 
 
 [[experience]]
