@@ -178,7 +178,7 @@ However, with RRF's `useFirestoreConnect` hook, you can attach a listener that w
 import React from 'react';
 import { useFirestoreConnect } from 'react-redux-firebase';
 
-export default function Component({ todoId }) {
+export default function Component() {
 	
   useFirestoreConnect({
     collection: 'todos'
