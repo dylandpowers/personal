@@ -27,8 +27,6 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-# How to Use React-Redux-Firebase
-
 In this post, I will show you how to use the [react-redux-firebase](https://www.npmjs.com/package/react-redux-firebase) package to incorporate Redux bindings for Firebase into your React project. This allows you to incorporate Firebase and Firestore data  into global state without any extra work, as well as handle auth in a super simple way. If you are unfamiliar with [React](https://reactjs.org/), [Redux](https://redux.js.org), or [Firebase](https://firebase.google.com/), please spend some time familiarizing yourself with those before jumping in.
 
 This is **not** a beginning-to-end tutorial; rather, I will show you how the `react-redux-firebase` (RRF) package to make your app flow much simpler. For setup instructions, check out [the documentation](https://www.npmjs.com/package/react-redux-firebase).
