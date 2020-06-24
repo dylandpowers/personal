@@ -6,7 +6,7 @@ subtitle: ""
 summary: "A short tutorial on how to use this really cool package bringing together the best of React, Redux, and Firebase."
 authors: []
 tags: [React, Redux, Firebase, JavaScript, React-Redux, React-Redux-Firebase, useFirestoreConnect, useFirebaseConnect, Auth, Authentication, User]
-categories: [Web]
+categories: [React]
 date: 2020-06-24T10:25:29-04:00
 lastmod: 2020-06-24T10:25:29-04:00
 featured: false
