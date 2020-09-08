@@ -18,11 +18,10 @@ organizations:
   url: "https://yext.com"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My interests include e-commerce, mobile app development, web app development, and design patterns.
+bio: My interests include e-commerce, web and mobile app development.
 
 interests:
 - E-commerce
-- Design patterns
 - Web app development
 - Mobile app development
 
