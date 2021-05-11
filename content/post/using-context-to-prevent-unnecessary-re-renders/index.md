@@ -47,7 +47,7 @@ function Child(props) {
   return (
     <>
       <p>Foo is {props.foo}</p>
-      <C bar={props.bar} />
+      <Grandchild bar={props.bar} />
     </>
   );
 }
