@@ -6,7 +6,7 @@ subtitle: ""
 summary: "When to actually use the useCallback function in React"
 authors: []
 tags: [React, Frontend, JavaScript, Hooks, useCallbackl]
-categories: []
+categories: [React]
 date: 2021-08-15T21:10:54-04:00
 lastmod: 2021-08-15T21:10:54-04:00
 featured: false
