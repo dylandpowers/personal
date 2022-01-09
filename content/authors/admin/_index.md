@@ -10,12 +10,12 @@ authors:
 superuser: true
 
 # Role/position
-role: Software Engineer at Yext
+role: Software Engineer at Addepar
 
 # Organizations/Affiliations
 organizations:
-- name: Yext
-  url: "https://yext.com"
+- name: Addepar
+  url: "https://addepar.com"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My interests include e-commerce, web and mobile app development.

@@ -23,7 +23,7 @@ image:
 # Projects (optional).
 #   Associate this post with one or more of your projects.
 #   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`. 
 #   Otherwise, set `projects = []`.
 projects: []
 ---
@@ -32,7 +32,7 @@ With the rising popularity of React, we are in an era of the most responsive use
 However, that doesn't mean we shouldn't introduce optimizations of our own! Too many re-renders can lead to performance issues, so we should optimize wherever we can. One common pitfall I see in React applications is what I call *messenger components*, which are components that pass some props from a parent to a child, but do not actually do anything with those props. For example, consider the following three components.
 
 ```jsx
-function Parent(props) {
+fun ction Parent(props) {
   const foo = 1;
   const bar = 2;
 
