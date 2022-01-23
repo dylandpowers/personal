@@ -18,12 +18,12 @@ organizations:
   url: "https://addepar.com"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My interests include e-commerce, web and mobile app development.
+bio: My interests include DevOps, web3, and React
 
 interests:
-- E-commerce
-- Web app development
-- Mobile app development
+- DevOps
+- web3
+- React
 
 education:
   courses:
@@ -59,8 +59,13 @@ email: ""
 # user_groups:
 ---
 
-Dylan is a lifelong learner who loves to live on the bleeding edge of technology. His technical interests include e-commerce, design patterns, web apps, and mobile application development. Dylan is most skilled with the React ecosystem; most recently, he created a [messaging app using React Native](https://github.com/dylandpowers/rn-messenger).
+Dylan has extensive experience building large-throughput systems impacting a wide range of users. 
+Currently,\he works as a Software Engineer at [Addepar](https://addepar.com), where he does full 
+stack development on the Addepar Management Platform. Previously, he was an engineer at 
+[Yext](https://yext.com), where he helped to develop the Yext Knowledge Platform.
 
-Throughout his senior year at Duke, Dylan worked in a sleeves-rolled-up role as a freelance Software Engineer for [OurSpace](https://ourspaceapp.com), where he did everything from setting up servers on AWS to creating user-friendly interfaces in Swift. Dylan has created several mobile and web apps on his own.
+Dylan thrives in environments where he can live on the bleeding edge of technology and learn 
+constantly. His technical interests include DevOps, developer productivity, web3, and React 
+development.
 
-Outside of the world of tech, Dylan loves snowboarding, reading, and running as often as he can. 
+Outside of tech, Dylan loves to run, snowboard, and read as often as he can.
