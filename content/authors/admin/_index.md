@@ -60,7 +60,7 @@ email: ""
 ---
 
 Dylan has extensive experience building large-throughput systems impacting a wide range of users. 
-Currently,\he works as a Software Engineer at [Addepar](https://addepar.com), where he does full 
+Currently, he works as a Software Engineer at [Addepar](https://addepar.com), where he does full 
 stack development on the Addepar Management Platform. Previously, he was an engineer at 
 [Yext](https://yext.com), where he helped to develop the Yext Knowledge Platform.
 
