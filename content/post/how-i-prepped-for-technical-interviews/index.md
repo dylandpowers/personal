@@ -5,8 +5,8 @@ title: "How I Prepped for Technical Interviews"
 subtitle: ""
 summary: ""
 authors: []
-tags: []
-categories: []
+tags: [Coding, Algorithms, Data Structures, Interview, Software Engineering]
+categories: [Interviewing]
 date: 2019-11-18T21:13:33-05:00
 lastmod: 2019-11-18T21:13:33-05:00
 featured: false
