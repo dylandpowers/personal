@@ -9,9 +9,9 @@ title = "Skills"
 subtitle = ""
 
 # Showcase personal skills or business features.
-# 
+#
 # Add/remove as many `[[feature]]` blocks below as you like.
-# 
+#
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
 
 [[feature]]
@@ -23,15 +23,9 @@ subtitle = ""
 [[feature]]
   icon = "react"
   icon_pack = "fab"
-  name = "React/React Native"
+  name = "React"
   description = "Advanced"
 
-[[feature]]
-  icon = "mobile"
-  icon_pack = "fas"
-  name = "Swift/iOS Development"
-  description = "Intermediate"
-  
 [[feature]]
   icon = "git"
   icon_pack = "fab"
@@ -43,7 +37,7 @@ subtitle = ""
   icon_pack = "fas"
   name = "Software Design"
   description = "Intermediate"
-  
+
 [[feature]]
   icon = "js-square"
   icon_pack = "fab"
@@ -57,14 +51,20 @@ subtitle = ""
   description = "Intermediate"
 
 [[feature]]
-  icon = "database"
-  icon_pack = "fas"
-  name = "Databases"
-  description = "Familiar"
-
-[[feature]]
   icon = "html5"
   icon_pack = "fab"
   name = "HTML/CSS"
+  description = "Intermediate"
+
+[[feature]]
+  icon = "mobile"
+  icon_pack = "fas"
+  name = "Swift/iOS Development"
+  description = "Familiar"
+
+[[feature]]
+  icon = "database"
+  icon_pack = "fas"
+  name = "Databases"
   description = "Familiar"
 +++
