@@ -60,7 +60,7 @@ time_format = "3:04 PM"
 # Enter contact details (optional). To hide a field, clear it to "".
 email = "dylandpowers@gmail.com"
 phone = "303 475 1909"
-address = "416 West 23rd Street, New York, NY 10011"
+address = "Brooklyn, NY"
 
 # Office hours: use `<br>` to insert a line break, or set to "" to remove office hours
 office_hours = ""

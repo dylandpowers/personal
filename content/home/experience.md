@@ -24,7 +24,7 @@ date_format = "Jan 2006"
   location = "New York"
   date_start = "2021-11-29"
   date_end = ""
-  description = """Addepar Management Platform"""
+  description = """Addepar Management Platform - Billing"""
 
 [[experience]]
   title = "Software Engineer"
@@ -33,7 +33,7 @@ date_format = "Jan 2006"
   location = "New York"
   date_start = "2020-06-22"
   date_end = "2021-11-19"
-  description = """Knowledge Manager group"""
+  description = """Knowledge Manager Platform"""
 
 
 [[experience]]
@@ -43,15 +43,7 @@ date_format = "Jan 2006"
   location = "New York"
   date_start = "2019-05-20"
   date_end = "2019-08-09"
-  description = """
-Work on team T-Bone under the Knowledge Graph umbrella. Responsible for Approvals, Enhanced Content Lists, Templates, and more.
-
-Migrated Approvals search mechanism from traditional MySQL to Elasticsearch. Wrote operation to build Elasticsearch documents from existing data in MySQL. Wrote message handlers to listen for updates to existing suggested edits using RabbitMQ. 
-
-Migrated front-end entity selector from traditional radio select to a more flexible React component in order to avoid cross-site scripting vulnerabilities. Wrote frontend Selenium tests for the successful operation of the component.
-
-Created architecture diagram for Scheduled Updates service so future developers can more easily visualize the system. Updated API documentation for service, as well as documentation about models and external dependencies.
-  """
+  description = """Knowledge Manager Platform"""
 
 [[experience]]
   title = "Engineering Intern"
@@ -60,11 +52,7 @@ Created architecture diagram for Scheduled Updates service so future developers 
   location = "North Carolina"
   date_start = "2018-05-14"
   date_end = "2018-11-17"
-  description = """Worked on Asset team, giving users visibility into all of their endpoints via detailed reports. Under the IT Operations umbrella. 
-
-  Created data normalization service for Asset product module, reducing number of customer database entries by 10%. This feature allows users to standardize software vendors and titles that come back in varying forms to enhance targeting abilities on software reports. Users define custom mappings that run against data imports and change the data accordingly. This feature was requested by several Fortune 500 companies.
-
-Developed PostgreSQL data model for storing normalization mappings. Created UI with AngularJS where users can view, edit, and delete normalization mappings. Created backend normalization algorithm with Node.js. Wrote extensive documentation for future team development."""
+  description = """Asset Team"""
 
 [[experience]]
   title = "Undergraduate Teaching Assistant"
@@ -90,6 +78,6 @@ Data Structures and Algorithms (CS201; S18)"""
   location = "North Carolina"
   date_start = "2016-08-23"
   date_end = "2019-08-23"
-  description = """Coach the extemporaneous speaking team of 8 students on Durham Academy's speech and debate team. Practices consist of one-on-one speaking drills and practice speeches to prepare students for various tournaments. Have coached 5 different top 6 state finishers since 2018."""
+  description = """Coached some kiddos"""
 
 +++
